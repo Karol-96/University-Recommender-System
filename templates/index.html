@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      margin-top: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Student Application Form</h1>
+  <form id="application-form" method="post" action="/recommend">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="hometown">Enter your hometown:</label>
+    <input type="text" id="hometown" name="hometown" required>
+
+    <label for="email">Enter your email address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="test">What kind of test have you done?</label>
+    <select id="test" name="test" required>
+      <option value="IELTS">IELTS</option>
+      <option value="PTE">PTE</option>
+    </select>
+
+    <label for="study-level">Are you applying for undergraduate or postgraduate studies?</label>
+    <select id="study-level" name="study-level" required>
+      <option value="undergraduate">Undergraduate</option>
+      <option value="postgraduate">Postgraduate</option>
+    </select>
+    <label for="gap">Do you have study GAP?</label>
+    <select id="gap" name="gap" required>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label for="gpa">Total GPA Score:</label>
+    <input type="text" id="gpa" name="gpa" required>
+
+    <label for="budget">What is your budget/college fee targeting?</label>
+    <select id="budget" name="budget" required>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+
+    <label for="city">Which city do you want to go to?</label>
+    <input type="text" id="city" name="city" required>
+
+    <label for="rankings">Do you care about college rankings?</label>
+    <select id="rankings" name="rankings" required>
+      <option value="yes">yes</option>
+      <option value="no">no</option>
+    </select>
+
+    <label for="intake">Which intake are you planning to apply for?</label>
+    <input type="text" id="intake" name="intake" required>
+
+
+    <label for="course">Which course are you looking for?</label>
+    <input type="text" id="course" name="course" required>
+
+    <button type="submit">Submit</button> <!-- Changed to type="submit" -->
+  </form>
+</div>
+
+<script>
+  // JavaScript function to trigger form submission
+  function submitForm() {
+    document.getElementById("application-form").submit();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- templates/no_university_found.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No University Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>No University Found</h1>
+        <p>No universities match the given requirements. Please adjust your criteria and try again.</p>
+        <a href="{{ url_for('index') }}" class="button">Back to Search</a>
+    </div>
+    <footer>
+        &copy; {{ current_year }} University Finder. All rights reserved.
+    </footer>
+</body>
+</html>
